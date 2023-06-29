@@ -1,10 +1,22 @@
 @extends('layouts.base')
 
 @section('contents')
-    <h1 class="ms-5 mb-3" style="font-weight: 700">Homepage</h1>
-    <div class="container d-flex flex-column justify-contents-center align-items-center">
-        
+<div class="bg-dark text-light py-2 mb-3">
+    <h1 class="ms-5" style="font-weight: 700">Homepage</h1>
+</div>
+    
 
+    <div class="w-100 d-flex justify-content-end mb-5" >
+        <button class="button" style="margin-right: 1.2rem; ">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 24">
+                <path d="m18 0 8 12 10-8-4 20H4L0 4l10 8 8-12z"></path>
+            </svg>
+            Unlock Pro
+        </button>
+    </div>
+    
+
+    <div class="container d-flex flex-column justify-contents-center align-items-center">
         
         <div class="svg-frame bg-dark mb-3 rounded-4">
             <svg style="--i:0;--j:0;">
@@ -57,7 +69,7 @@
         {{-- Animazione di una libreria --}}
        
     
-    <h3 class="text-center">Ciao! sono mi chiamo IA!</h3>
+    <h3 class="text-center">Ciao! Mi chiamo IA!</h3>
     <h3 class="text-center">Ti dò il benvenuto nella Boolean Comics!</h3>
     <h3 class="text-center">Scegli pure un Comic dalla nostra lista!</h3>
 

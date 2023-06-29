@@ -1,6 +1,6 @@
 <header class="bg-dark py-3">
     <div class="container">
-        <h1 class="text-center text-primary">Boolean Trains</h1>
+        <h1 class="text-center text-primary">Boolean Comics</h1>
         
     </div>
     
