@@ -28,12 +28,28 @@
                     </div>
                 </div>
             </div>
-            {{ $comics->links() }}
+           
 
         @endforeach
+       
+        {{-- <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="http://127.0.0.1:8001/comics?page=1"><<</a></li>
+              <li class="page-item"><a class="page-link" href="http://127.0.0.1:8001/comics?page=1">1</a></li>
+              <li class="page-item"><a class="page-link" href="http://127.0.0.1:8001/comics?page=2">2</a></li>
+              <li class="page-item"><a class="page-link" href="http://127.0.0.1:8001/comics?page=3">3</a></li>
+              <li class="page-item"><a class="page-link" href="http://127.0.0.1:8001/comics?page=3">>></a></li>
+            </ul>
+        </nav> --}}
+        
+    </div>
+    
+    <div class="px-4 d-flex flex-column justify-content-start" style=" font-size:20px; font-weight: 700">
+        {{ $comics->links() }}
     </div>
     
     
+
     
 
 @endsection

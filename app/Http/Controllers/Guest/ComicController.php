@@ -15,7 +15,7 @@ class ComicController extends Controller
      */
     public function index()
     {
-        $comics = Comic::all();
+        $comics = Comic::paginate(4);
 
         return view('comics.index', compact('comics'));
     }
@@ -42,8 +42,8 @@ class ComicController extends Controller
         //validare i dati
 
         $request->validate([
-            'title' => 'required|string|max:255',
-            'description' => 'required|string|max:2000',
+            'title' => 'required|string|max:100',
+            'description' => 'required|string|',
             'thumb' => 'required|string|max:1000',
             'price' => 'required|integer|max:255',
             'series' => 'required|string|max:255',
