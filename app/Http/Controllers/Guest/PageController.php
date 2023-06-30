@@ -14,12 +14,12 @@ class PageController extends Controller
         return view('homepage');
     }
 
-    public function comics()
-    {
-        // il controller chiama il Model per recuperare i dati dal database
-        $arrComics = Comic::all();
+    // public function comics()
+    // {
+    //     // il controller chiama il Model per recuperare i dati dal database
+    //     $arrComics = Comic::all();
 
 
-        return view('comics', compact('arrComics'));
-    }
+    //     return view('comics', compact('arrComics'));
+    // }
 }

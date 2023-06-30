@@ -6,11 +6,11 @@
         <title>Laravel</title>
         @vite('resources/js/app.js')
     </head>
-    <body>
+    <body style="background-color: grey">
         @include('partials.header')
 
-        <div class="container_main">
-            <main>
+        <div class="container_main" >
+            <main >
                 @yield('contents')
             </main>
         </div>

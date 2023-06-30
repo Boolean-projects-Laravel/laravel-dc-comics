@@ -2,15 +2,17 @@
 
 @section('contents')
     
+<div>
+    <h1>{{ $comic->title }}</h1>
+    <h2>Tipo: {{ $comic->type }}</h2>
 
-<h1>{{ $comic->title }}</h1>
-<h2>Tipo: {{ $comic->type }}</h2>
+    <div style="height: 500px">
+        <img class="h-100 image-fluid" src="{{ $comic->thumb }}" alt="">
+    </div>
 
-<div style="height: 500px">
-    <img class="h-100 image-fluid" src="{{ $comic->thumb }}" alt="">
+
+    <p>{!! $comic->description !!}</p>
 </div>
 
-
-<p>{!! $comic->description !!}</p>
 
 @endsection
