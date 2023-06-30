@@ -11,7 +11,8 @@
                     
                     
                     <div class="card-body" >
-                    <h6 class="card-title">{{$comic->title}}</h6>
+                        
+                    <h5 class="card-title" style="font-weight: 700; ">{{$comic->title}}</h5>
                     {{-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> --}}
                     </div>
                     <ul class="list-group list-group-flush">
@@ -27,10 +28,11 @@
                     </div>
                 </div>
             </div>
-            
+            {{ $comics->links() }}
 
         @endforeach
     </div>
+    
     
     
 
