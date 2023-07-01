@@ -6,7 +6,7 @@
         <title>Laravel</title>
         @vite('resources/js/app.js')
     </head>
-    <body style="background-color: grey">
+    <body style="background-color: grey; font-family:'Times New Roman', Times, serif">
         @include('partials.header')
 
         <div class="container_main" >

@@ -71,7 +71,18 @@
     
     <h3 class="text-center">Ciao! Mi chiamo IA!</h3>
     <h3 class="text-center">Ti dò il benvenuto nella Boolean Comics!</h3>
-    <h3 class="text-center">Scegli pure un Comic dalla nostra lista!</h3>
+    <h3 class="text-center">Scegli pure un Comic dalla nostra lista! O creane uno se ti va!</h3>
+    
+    
+        
+        
+    
+    <h3></h3>
+    <div class="w-25 d-flex justify-content-center m-auto">
+        <button type="button" class="btn btn-primary mt-4"><a href="{{ '/comics/create' }}" class="card-link text-decoration-none text-light" style="font-weight: 700; font-size:25px">Creare un nuovo Comic</a></button>
+    </div>
+    
+
 
 @endsection
 
