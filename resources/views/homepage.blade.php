@@ -2,7 +2,7 @@
 
 @section('contents')
 <div class="bg-dark text-light py-2 mb-3">
-    <h1 class="ms-5" style="font-weight: 700">Homepage</h1>
+    <h1 class="ms-4" style="font-weight: 700">Homepage</h1>
 </div>
     
 
@@ -19,6 +19,7 @@
     <div class="container d-flex flex-column justify-contents-center align-items-center">
         
         <div class="svg-frame bg-dark mb-3 rounded-4">
+
             <svg style="--i:0;--j:0;">
                 <g id="out1">
                     <path d="M72 172C72 116.772 116.772 72 172 72C227.228 72 272 116.772 272 172C272 227.228 227.228 272 172 272C116.772 272 72 227.228 72 172ZM197.322 172C197.322 158.015 185.985 146.678 172 146.678C158.015 146.678 146.678 158.015 146.678 172C146.678 185.985 158.015 197.322 172 197.322C185.985 197.322 197.322 185.985 197.322 172Z"></path>
@@ -68,21 +69,14 @@
 
         {{-- Animazione di una libreria --}}
        
-    
     <h3 class="text-center">Ciao! Mi chiamo IA!</h3>
     <h3 class="text-center">Ti dò il benvenuto nella Boolean Comics!</h3>
     <h3 class="text-center">Scegli pure un Comic dalla nostra lista! O creane uno se ti va!</h3>
-    
-    
-        
-        
-    
+     
     <h3></h3>
     <div class="w-25 d-flex justify-content-center m-auto">
         <button type="button" class="btn btn-primary mt-4"><a href="{{ '/comics/create' }}" class="card-link text-decoration-none text-light" style="font-weight: 700; font-size:25px">Creare un nuovo Comic</a></button>
     </div>
     
-
-
 @endsection
 

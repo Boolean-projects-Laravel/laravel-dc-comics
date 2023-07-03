@@ -297,50 +297,58 @@
        
        <div class="relative flex items-top justify-center  min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
             <div class="max-w-l mx-auto sm:px-6 lg:px-8">
-                <div class="flex flex-column items-center justify-center pt-8  sm:pt-0 " >
-
-                    <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster ">
-                        <div class="wheel"></div>
-                        <div class="hamster">
-                            <div class="hamster__body">
-                                <div class="hamster__head">
-                                    <div class="hamster__ear"></div>
-                                    <div class="hamster__eye"></div>
-                                    <div class="hamster__nose"></div>
+                <div class="flex items-center justify-center pt-8 sm:pt-0 " >
+                    
+                    <div class="m-2">
+                        <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster ">
+                            <div class="wheel"></div>
+                            <div class="hamster">
+                                <div class="hamster__body">
+                                    <div class="hamster__head">
+                                        <div class="hamster__ear"></div>
+                                        <div class="hamster__eye"></div>
+                                        <div class="hamster__nose"></div>
+                                    </div>
+                                    <div class="hamster__limb hamster__limb--fr"></div>
+                                    <div class="hamster__limb hamster__limb--fl"></div>
+                                    <div class="hamster__limb hamster__limb--br"></div>
+                                    <div class="hamster__limb hamster__limb--bl"></div>
+                                    <div class="hamster__tail"></div>
                                 </div>
-                                <div class="hamster__limb hamster__limb--fr"></div>
-                                <div class="hamster__limb hamster__limb--fl"></div>
-                                <div class="hamster__limb hamster__limb--br"></div>
-                                <div class="hamster__limb hamster__limb--bl"></div>
-                                <div class="hamster__tail"></div>
                             </div>
+                            <div class="spoke"></div>
                         </div>
-                        <div class="spoke"></div>
                     </div>
 
-                    <img src="{{ Vite::asset('resources/images/ops.webp') }}" alt=""  style="border:4px solid red">
+                   
+                    <div class="m-3">
+                        <img src="{{ Vite::asset('resources/images/ops.webp') }}" alt="" class="" style="border:4px solid red">
+                    </div>
+                    
                     
                     {{-- <img src="{{ Vite::asset('resources/img/picsum30.jpg') }}" alt=""> --}}
                     
-
-                    <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster m-2">
-                        <div class="wheel"></div>
-                        <div class="hamster">
-                            <div class="hamster__body">
-                                <div class="hamster__head">
-                                    <div class="hamster__ear"></div>
-                                    <div class="hamster__eye"></div>
-                                    <div class="hamster__nose"></div>
+                    <div class="m-2">
+                        <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster m-2">
+                            <div class="wheel"></div>
+                            <div class="hamster">
+                                <div class="hamster__body">
+                                    <div class="hamster__head">
+                                        <div class="hamster__ear"></div>
+                                        <div class="hamster__eye"></div>
+                                        <div class="hamster__nose"></div>
+                                    </div>
+                                    <div class="hamster__limb hamster__limb--fr"></div>
+                                    <div class="hamster__limb hamster__limb--fl"></div>
+                                    <div class="hamster__limb hamster__limb--br"></div>
+                                    <div class="hamster__limb hamster__limb--bl"></div>
+                                    <div class="hamster__tail"></div>
                                 </div>
-                                <div class="hamster__limb hamster__limb--fr"></div>
-                                <div class="hamster__limb hamster__limb--fl"></div>
-                                <div class="hamster__limb hamster__limb--br"></div>
-                                <div class="hamster__limb hamster__limb--bl"></div>
-                                <div class="hamster__tail"></div>
                             </div>
+                            <div class="spoke"></div>
                         </div>
-                        <div class="spoke"></div>
                     </div>
+                    
                 </div>
                 <div class="flex text-lg  tracking-wider justify-center text-center" style="color:red">
                     @yield('code')

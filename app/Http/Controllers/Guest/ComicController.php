@@ -8,6 +8,16 @@ use Illuminate\Http\Request;
 
 class ComicController extends Controller
 {
+    private $validations = [
+        'title' => 'required|string|max:100',
+        'description' => 'required|string|',
+        'thumb' => 'required|string|max:1000',
+        'price' => 'required|integer|max:255',
+        'series' => 'required|string|max:255',
+        'sale_date' => 'required|date|max:20',
+        'type' => 'required|string|max:20',
+    ];
+
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +25,7 @@ class ComicController extends Controller
      */
     public function index()
     {
-        $comics = Comic::paginate(4);
+        $comics = Comic::paginate(8);
 
         return view('comics.index', compact('comics'));
     }
@@ -41,15 +51,7 @@ class ComicController extends Controller
 
         //validare i dati
 
-        $request->validate([
-            'title' => 'required|string|max:100',
-            'description' => 'required|string|',
-            'thumb' => 'required|string|max:1000',
-            'price' => 'required|integer|max:255',
-            'series' => 'required|string|max:255',
-            'sale_date' => 'required|date|max:20',
-            'type' => 'required|string|max:20',
-        ]);
+        $request->validate($this->validations);
 
         $data = $request->all();
 
@@ -89,7 +91,7 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+        return view('comics.edit', compact('comic'));
     }
 
     /**
@@ -101,7 +103,21 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //
+        $request->validate($this->validations);
+
+        $data = $request->all();
+
+        $comic->title = $data['title'];
+        $comic->description = $data['description'];
+        $comic->thumb = $data['thumb'];
+        $comic->price = $data['price'];
+        $comic->series = $data['series'];
+        $comic->sale_date = $data['sale_date'];
+        $comic->type = $data['type'];
+
+        $comic->update();
+
+        return to_route('comics.index', ['comic' => $comic->id]);
     }
 
     /**
@@ -112,6 +128,36 @@ class ComicController extends Controller
      */
     public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+
+        return to_route('comics.index')->with('delete_success', $comic);
+    }
+
+
+
+    //da qui in avanti bisogna richiamare i route dal web.php perchè il comando si ferma a 'destroy'
+
+    public function restore($id)
+    {
+        Comic::withTrashed()->where('id', $id)->restore();
+
+        $comic = Comic::find($id);
+
+        return to_route('comics.index')->with('restore_success', $comic);
+    }
+    public function trashed()
+    {
+        $trashedComics = Comic::onlyTrashed()->paginate(5);
+
+        return view('comics.trashed', compact('trashedComics'));
+
+    }
+
+    public function harddelete($id)
+    {
+        $comic = Comic::withTrashed()->find($id);
+        $comic->forceDelete();
+
+        return to_route('comics.trashed')->with('delete_success', $comic);
     }
 }

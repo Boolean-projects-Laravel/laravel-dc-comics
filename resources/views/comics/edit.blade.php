@@ -1,52 +1,56 @@
 @extends('layouts.base')
 
 @section('contents')
+<div class="bg-dark text-light py-2 mb-3">
+    <h1 class="ms-4" style="font-weight: 700">Modifica Comic</h1>
+</div>
 <div class="p-5" style="margin-inline: 10rem">
-    <h1>Inserisci un nuovo Comic</h1>
-    <form method="POST" action="{{ route('comics.store') }}">
+    
+    <form method="POST" action="{{ route('comics.update', ['comic' => $comic->id] )}}">
         {{-- Per protezione dati --}}
         @csrf 
+        @method('PUT')
         {{-- Per protezione dati --}}
 
         <div class="mb-3">
             <label for="thumb" class="form-label" style="font-weight:700">Immagine</label>
-            <input type="text" class="form-control" id="thumb" name="thumb" value="{{old('thumb')}}">
+            <input type="text" class="form-control" id="thumb" name="thumb" value="{{old('thumb', $comic->thumb)}}">
         </div>
 
         <div class="mb-3">
             <label for="title" class="form-label" style="font-weight:700">Titolo</label>
-            <input type="text" class="form-control" id="title" name="title" value="{{old('title')}}">
+            <input type="text" class="form-control" id="title" name="title" value="{{old('title', $comic->title)}}">
         </div>
 
         
 
         <div class="mb-3">
             <label for="price" class="form-label" style="font-weight:700">Prezzo</label>
-            <input type="text" class="form-control" id="price" name="price" value="{{old('price')}}">
+            <input type="text" class="form-control" id="price" name="price" value="{{old('price', $comic->price)}}">
         </div>
 
         <div class="mb-3">
             <label for="series" class="form-label" style="font-weight:700">Serie</label>
-            <input type="text" class="form-control" id="series" name="series" value="{{old('series')}}">
+            <input type="text" class="form-control" id="series" name="series" value="{{old('series', $comic->series)}}">
         </div>
 
         <div class="mb-3">
             <label for="sale_date" class="form-label" style="font-weight:700">Data di vendita</label>
-            <input type="text" class="form-control" id="sale_date" name="sale_date" value="{{old('sale_date')}}">
+            <input type="text" class="form-control" id="sale_date" name="sale_date" value="{{old('sale_date', $comic->sale_date)}}">
         </div>
 
         <div class="mb-3">
             <label for="type" class="form-label" style="font-weight:700">Tipologia</label>
-            <input type="text" class="form-control" id="type" name="type" value="{{old('type')}}">
+            <input type="text" class="form-control" id="type" name="type" value="{{old('type', $comic->type)}}">
         </div>
 
 
         <div class="mb-3">
             <label for="descriprion" class="form-label" style="font-weight:700">Descrizione</label>
-            <textarea class="form-control" id="description" rows="3" name="description" value="{{old('description')}}"></textarea>
+            <textarea  class="form-control" id="description" rows="3" name="description">{{old('description', $comic->description)}}</textarea>
         </div>
 
-        <button class="btn btn-primary">Salva</button>
+        <button class="btn btn-primary">Aggiorna</button>
     </form>
 </div>
     
