@@ -39,10 +39,11 @@
 
     @endif
 
-    <button type="button" class="btn btn-primary mt-4 mx-4"><a href="{{ '/comics/create' }}" class="card-link text-decoration-none text-light" style="font-weight: 700; font-size:25px">Creare un nuovo Comic</a></button>
+    <button type="button" class="btn btn-primary mt-4 mx-4">
+        <a href="{{ '/comics/create' }}" class="card-link text-decoration-none text-light" style="font-weight: 700; font-size:25px">Creare un nuovo Comic</a>
+    </button>
     <div class="row row-cols-4 p-4">
         
-
         @foreach ($comics as $comic)
             <div class="col mb-3">
                 <div class="card h-100" style="border:3px solid black">
@@ -58,15 +59,27 @@
 
 
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><span style="font-weight: 700">Prezzo:</span> {{$comic->price}}.00$</li>
-                        <li class="list-group-item"><span style="font-weight: 700">Serie:</span> {{$comic->series}}</li>
-                        <li class="list-group-item"><span style="font-weight: 700">Data di vendita:</span> {{$comic->sale_date}}</li>
-                        <li class="list-group-item"><span style="font-weight: 700">Tipologia:</span> {{$comic->type}}</li>
+                        <li class="list-group-item">
+                            <span style="font-weight: 700">Prezzo:</span> {{$comic->price}}.00$
+                        </li>
+                        <li class="list-group-item">
+                            <span style="font-weight: 700">Serie:</span> {{$comic->series}}
+                        </li>
+                        <li class="list-group-item">
+                            <span style="font-weight: 700">Data di vendita:</span> {{$comic->sale_date}}
+                        </li>
+                        <li class="list-group-item">
+                            <span style="font-weight: 700">Tipologia:</span> {{$comic->type}}
+                        </li>
                     </ul>
 
                     <div class="card-body">
-                        <button type="button" class="btn btn-primary"><a href="{{ route('comics.show', ['comic' => $comic->id]) }}" class="card-link text-decoration-none text-light" style="font-weight: 700;">Descrizione</a></button>
-                        <button type="button" class="btn btn-secondary"><a href="{{ route('comics.edit', ['comic' => $comic->id]) }}" class="card-link text-decoration-none text-light" style="font-weight: 700;">Edit</a></button>
+                        <button type="button" class="btn btn-primary">
+                            <a href="{{ route('comics.show', ['comic' => $comic->id]) }}" class="card-link text-decoration-none text-light" style="font-weight: 700;">Descrizione</a>
+                        </button>
+                        <button type="button" class="btn btn-secondary">
+                            <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}" class="card-link text-decoration-none text-light" style="font-weight: 700;">Edit</a>
+                        </button>
                         <form class="d-inline-block" method="POST" action="{{ route('comics.destroy', ['comic' => $comic->id]) }}">
                             @csrf
                             @method('delete')
@@ -75,11 +88,8 @@
                     </div>
                 </div>
             </div>
-           
-
         @endforeach
        
-      
     </div>
     
     <div class="px-4 d-flex flex-column justify-content-start" style=" font-size:20px; font-weight: 700">

@@ -7,7 +7,6 @@
 
 <div class="row row-col-4 p-4">
         
-
     <div class=" offset-4 col-4 mb-3" style="border-radius: 50%">
         <div class="card h-100 p-5" style="border:3px solid black">
             <h1 class="mb-4" style="font-weight: 700">{{ $comic->title }}</h1>
@@ -26,12 +25,8 @@
                     <p>{!! $comic->description !!}</p>
                 </li>
             </ul>   
-           
         </div>
     </div>
-       
-
-    
     
 </div>
 

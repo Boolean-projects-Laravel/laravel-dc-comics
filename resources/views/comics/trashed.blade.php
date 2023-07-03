@@ -48,7 +48,9 @@
                         >
                             @csrf
                             @method('delete')
-                            <button class="btn btn-danger button_delete">Elimina definitivamente</button>
+                            <button class="btn btn-danger button_delete">
+                                Elimina definitivamente
+                            </button>
                         </form>
                     </td>
                 </tr>
