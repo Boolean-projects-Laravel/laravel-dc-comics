@@ -19,9 +19,9 @@
                 <th scope="col">ID</th>
                 <th scope="col">Titolo</th>
                 <th scope="col">Tipo</th>
-                <th scope="col">Cottura (min)</th>
-                <th scope="col">Peso (g)</th>
-                <th scope="col">Actions</th>
+                <th scope="col">Data di vendita</th>
+                <th scope="col">Tipologia</th>
+                
             </tr>
         </thead>
         <tbody>

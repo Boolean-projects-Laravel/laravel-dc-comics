@@ -1,7 +1,7 @@
 let buttonDelete = document.querySelectorAll(".button_delete");
 
 buttonDelete.forEach(function(button){
-    button.addEventListener("click", function(){
+    button.addEventListener("click", function(event){
         if(confirm('sicuro di voler cancellare questo Comic?')){
             alert('operazione completata')
         }

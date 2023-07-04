@@ -18,8 +18,6 @@
             <input type="text" class="form-control" id="title" name="title" value="{{old('title')}}">
         </div>
 
-        
-
         <div class="mb-3">
             <label for="price" class="form-label" style="font-weight:700; font-size:20px">Prezzo</label>
             <input type="text" class="form-control" id="price" name="price" value="{{old('price')}}">
@@ -39,7 +37,6 @@
             <label for="type" class="form-label" style="font-weight:700; font-size:20px">Tipologia</label>
             <input type="text" class="form-control" id="type" name="type" value="{{old('type')}}">
         </div>
-
 
         <div class="mb-3">
             <label for="descriprion" class="form-label" style="font-weight:700; font-size:20px">Descrizione</label>
