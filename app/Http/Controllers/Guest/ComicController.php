@@ -152,7 +152,6 @@ class ComicController extends Controller
         return view('comics.trashed', compact('trashedComics'));
 
     }
-
     public function harddelete($id)
     {
         $comic = Comic::withTrashed()->find($id);

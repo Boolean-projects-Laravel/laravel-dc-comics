@@ -16,7 +16,6 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th scope="col">ID</th>
                 <th scope="col">Titolo</th>
                 <th scope="col">Tipo</th>
                 <th scope="col">Data di vendita</th>
